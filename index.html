@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIGINETICS. Embarc Collective + Florida Founders Pitch Deck 2026</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#09090b;--surface:#111113;--border:#27272a;
+  --accent:#10b981;--accent2:#06b6d4;
+  --red:#ef4444;--amber:#f59e0b;--purple:#8b5cf6;--gold:#c9a84c;--florida:#ff7f50;
+  --text:#fafafa;--dim:#71717a;--muted:#a1a1aa;--light:#d4d4d8;
+}
+
+@page{size:11in 8.5in;margin:0}
+
+html{scroll-behavior:smooth;scroll-snap-type:y mandatory;-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-size:11px}
+
+.slide{
+  width:11in;height:8.5in;
+  display:flex;align-items:center;justify-content:center;
+  padding:0.45in 0.7in;position:relative;overflow:hidden;
+  page-break-after:always;break-after:page;
+  scroll-snap-align:start;
+}
+.content{max-width:100%;width:100%}
+
+.sn{position:absolute;top:0.3in;right:0.5in;font-size:8px;color:var(--dim);letter-spacing:2px;font-weight:600}
+.logo{position:absolute;top:0.3in;left:0.5in;font-weight:700;color:#27272a;letter-spacing:3px;font-size:9px}
+
+h1{font-size:2.6em;font-weight:800;line-height:1.1;margin-bottom:14px}
+h2{font-size:1.8em;font-weight:700;line-height:1.15;margin-bottom:12px}
+h3{font-size:8px;font-weight:600;color:var(--accent);margin-bottom:10px;letter-spacing:3px;text-transform:uppercase}
+p{font-size:11px;line-height:1.55;color:var(--muted);margin-bottom:7px}
+.big{font-size:13px;line-height:1.5;color:var(--light)}
+.g{color:var(--accent);font-weight:600}
+.c{color:var(--accent2);font-weight:600}
+.r{color:var(--red);font-weight:600}
+.go{color:var(--gold);font-weight:600}
+.fl{color:var(--florida);font-weight:600}
+
+.stat-row{display:flex;gap:10px;margin:14px 0}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 10px;flex:1;text-align:center}
+.sv{font-size:1.9em;font-weight:800}
+.sl{font-size:7.5px;color:var(--dim);margin-top:4px;line-height:1.35}
+
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.card-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:12px 0}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px}
+.card h4{font-size:11px;font-weight:600;margin-bottom:5px}
+.card p{font-size:10px;margin:0;line-height:1.45}
+
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:10px}
+th{text-align:left;padding:6px 10px;background:var(--surface);color:var(--accent);font-size:8px;letter-spacing:1px}
+td{padding:6px 10px;border-bottom:1px solid var(--border);color:var(--light)}
+
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:14px 0;border-radius:10px;overflow:hidden;border:1px solid var(--border)}
+.compare-col{padding:16px 18px}
+.compare-col.them{background:#1a0a0a}
+.compare-col.us{background:#0a1a14}
+.compare-label{font-weight:700;font-size:8px;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.compare-col.them .compare-label{color:var(--red)}
+.compare-col.us .compare-label{color:var(--accent)}
+.compare-col p{font-size:11px;margin-bottom:5px;line-height:1.5}
+
+.story{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:8px}
+.story .headline{font-weight:600;font-size:11px;color:var(--text);margin-bottom:2px}
+.story p{font-size:10px;margin:0;color:var(--muted);line-height:1.45}
+.story .tag{font-size:7px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+
+.law{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin-bottom:10px;border-left:3px solid var(--accent)}
+.law .law-name{font-size:8px;font-weight:600;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+.law .law-eq{font-family:'Courier New',monospace;font-size:1.05em;color:var(--text);font-weight:700;margin-bottom:4px;letter-spacing:0.3px}
+.law .law-sub{font-size:9.5px;color:var(--muted);line-height:1.45;margin:0}
+.law.biology{border-left-color:var(--purple)}
+.law.biology .law-name{color:var(--purple)}
+.law.cre{border-left-color:var(--accent2)}
+.law.cre .law-name{color:var(--accent2)}
+
+.timeline{margin:10px 0}
+.tl-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+.tl-dot{width:8px;height:8px;border-radius:50%;margin-top:4px;flex-shrink:0}
+.tl-text{font-size:10.5px;color:var(--light);line-height:1.4}
+.tl-text strong{color:var(--text)}
+
+.fund-bar{display:flex;gap:2px;margin:12px 0;height:28px;border-radius:6px;overflow:hidden}
+.fund-seg{display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:600;letter-spacing:.5px;color:#fff}
+
+.founder-row{display:flex;gap:12px;margin:14px 0}
+.founder-card{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center}
+.founder-avatar{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1em;margin:0 auto 10px}
+.founder-card h4{font-size:11px;font-weight:600;margin-bottom:3px}
+.founder-card .role{font-size:9px;color:var(--accent);font-weight:500;margin-bottom:8px}
+.founder-card p{font-size:9.5px;margin:0;line-height:1.45;text-align:center}
+
+.slide-bg{position:absolute;inset:0;z-index:0}
+.slide-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,9,11,.88) 0%,rgba(9,9,11,.94) 50%,rgba(9,9,11,.96) 100%)}
+.slide .content{position:relative;z-index:1}
+
+.nav{position:fixed;bottom:30px;right:40px;display:flex;gap:6px;z-index:99}
+.nav-dot{width:8px;height:8px;border-radius:50%;background:#27272a;cursor:pointer;transition:all .2s}
+.nav-dot.active{background:var(--accent);transform:scale(1.3)}
+
+.pill{display:inline-block;padding:2px 8px;border-radius:20px;font-size:7.5px;font-weight:600;letter-spacing:.5px}
+.pill-green{background:rgba(16,185,129,.15);color:var(--accent)}
+.pill-blue{background:rgba(6,182,212,.15);color:var(--accent2)}
+.pill-purple{background:rgba(139,92,246,.15);color:var(--purple)}
+.pill-gold{background:rgba(201,168,76,.15);color:var(--gold)}
+.pill-florida{background:rgba(255,127,80,.15);color:var(--florida)}
+
+.uc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:12px 0}
+.uc-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+.uc-card:hover{border-color:var(--accent)}
+.uc-card .uc-icon{font-size:1.4em;margin-bottom:6px}
+.uc-card h4{font-size:10px;font-weight:600;margin-bottom:4px;color:var(--text)}
+.uc-card p{font-size:9px;margin:0;line-height:1.4;color:var(--muted)}
+
+.regime-row{display:flex;gap:6px;margin:12px 0;flex-wrap:wrap}
+.regime-chip{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:5px 12px;font-size:9px;color:var(--light)}
+.regime-chip strong{color:var(--accent)}
+
+.partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.partner-card{background:var(--surface);border:2px solid var(--florida);border-radius:12px;padding:18px 20px}
+.partner-card h4{font-size:1em;font-weight:700;margin-bottom:6px;color:var(--florida)}
+.partner-card .subtitle{font-size:8px;color:var(--dim);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px}
+.partner-card p{font-size:10px;line-height:1.5;color:var(--light);margin-bottom:6px}
+
+@media print{
+  html,body{width:11in;height:8.5in}
+  .nav{display:none !important}
+  .slide{page-break-after:always;break-after:page;page-break-inside:avoid;break-inside:avoid}
+}
+
+@media screen{
+  .slide{min-height:100vh;width:auto;height:auto;padding:60px 80px}
+  body{font-size:16px}
+  h1{font-size:3.2em}h2{font-size:2.2em}h3{font-size:12px}
+  p{font-size:1.1em;line-height:1.7;margin-bottom:12px}
+  .content{max-width:960px}
+  .sv{font-size:2.4em}
+  .sl{font-size:12px}
+  .stat{padding:24px 16px}
+  .stat-row{gap:16px;margin:24px 0}
+  .card{padding:24px}
+  .card h4{font-size:1.05em}
+  .card p{font-size:.92em;line-height:1.55}
+  .card-grid,.card-grid-3{gap:14px;margin:20px 0}
+  table{font-size:.9em;margin:18px 0}
+  th{padding:10px 14px;font-size:13px}
+  td{padding:10px 14px}
+  .compare-col{padding:28px 26px}
+  .compare-label{font-size:12px}
+  .compare-col p{font-size:1em;margin-bottom:8px;line-height:1.6}
+  .story{padding:22px;margin-bottom:14px}
+  .story .headline{font-size:1.05em}
+  .story p{font-size:.92em;line-height:1.55}
+  .story .tag{font-size:11px}
+  .tl-item{gap:16px;margin-bottom:16px}
+  .tl-text{font-size:15px}
+  .fund-bar{height:36px;margin:20px 0}
+  .fund-seg{font-size:10px}
+  .founder-card{padding:24px}
+  .founder-avatar{width:64px;height:64px;font-size:1.3em}
+  .founder-card h4{font-size:1.05em}
+  .founder-card .role{font-size:13px}
+  .founder-card p{font-size:14px}
+  .pill{font-size:11px;padding:3px 12px}
+  .uc-grid{gap:12px;margin:20px 0}
+  .uc-card{padding:20px}
+  .uc-card .uc-icon{font-size:1.8em}
+  .uc-card h4{font-size:15px}
+  .uc-card p{font-size:13px}
+  .sn{font-size:11px;top:30px;right:40px}
+  .logo{font-size:13px;top:30px;left:40px}
+  .compare-grid{margin:24px 0}
+  .timeline{margin:20px 0}
+  .founder-row{gap:16px;margin:20px 0}
+  .law{padding:22px 26px;margin-bottom:14px}
+  .law .law-name{font-size:11px}
+  .law .law-eq{font-size:1.4em}
+  .law .law-sub{font-size:14px}
+  .regime-chip{font-size:13px;padding:8px 16px}
+  .partner-card{padding:26px 28px}
+  .partner-card h4{font-size:1.35em}
+  .partner-card .subtitle{font-size:11px}
+  .partner-card p{font-size:14px;line-height:1.6}
+}
+
+@media screen and (max-width:768px){
+  .slide{padding:30px 20px}
+  h1{font-size:2em}h2{font-size:1.5em}
+  .compare-grid,.card-grid,.card-grid-3,.uc-grid,.partner-grid{grid-template-columns:1fr}
+  .stat-row,.founder-row{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- 1. TITLE -->
+<div class="slide" id="s1" style="text-align:center">
+<div class="content">
+<p style="font-size:.85em;color:var(--dim);letter-spacing:3px;margin-bottom:20px">DIGINETICS, INC.</p>
+<h1 style="font-size:3.8em;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px">DIGINETICS</h1>
+<p style="font-size:1.5em;color:var(--text);margin-bottom:8px;font-weight:300">We discover the equations of the world.</p>
+<p style="color:var(--dim);font-size:1em;margin-bottom:32px">AI that hands you the law, not the guess.</p>
+<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:40px">
+<span class="pill pill-green">PATENT-PENDING</span>
+<span class="pill pill-blue">8 INDUSTRIES VALIDATED</span>
+<span class="pill pill-purple">LIVE DEPLOYMENTS</span>
+<span class="pill pill-florida">EMBARC COLLECTIVE + FLORIDA FOUNDERS</span>
+</div>
+<p style="color:var(--dim);font-size:.85em">Michael Lazzarotti &bull; Evan O'Connell</p>
+<p style="color:#27272a;font-size:.75em;letter-spacing:2px;margin-top:30px">CONFIDENTIAL. APRIL 2026.</p>
+</div>
+<div class="sn">01 / 20</div>
+</div>
+
+<!-- 2. PROBLEM -->
+<div class="slide" id="s2">
+<div class="content">
+<h3>The Problem</h3>
+<h2>Businesses trust AI. <span class="r">AI guesses.</span></h2>
+<p style="margin-bottom:24px">These are real consequences of AI that cannot prove its answers.</p>
+<div class="story">
+<div class="tag" style="color:var(--red)">$881 Million Lost, 2021</div>
+<div class="headline">Zillow's AI bought homes based on pricing patterns.</div>
+<p>The model found correlations, not causes. Lost $881M. 2,000 employees fired. Division shut down.</p>
+</div>
+<div class="story">
+<div class="tag" style="color:var(--red)">Federal Sanctions, 2023</div>
+<div class="headline">A lawyer filed a brief written by ChatGPT.</div>
+<p>It invented 6 fake court cases. Sanctioned by a federal judge. The AI was confident. It was wrong.</p>
+</div>
+<div class="story">
+<div class="tag" style="color:var(--amber)">Structural Failure</div>
+<div class="headline">Current AI identifies what <em>tends to co-occur</em>. It cannot identify what <em>actually drives</em> outcomes.</div>
+<p>Every industry making high-stakes decisions with AI faces the same gap: correlation masquerading as causation, and a black box that breaks the moment the world shifts outside its training data.</p>
+</div>
+</div>
+<div class="sn">02 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 3. SOLUTION -->
+<div class="slide" id="s3">
+<div class="content">
+<h3>The Solution</h3>
+<h2>We built the AI that <span class="g">proves it first.</span></h2>
+<p style="margin-bottom:20px;font-size:1.1em;color:var(--light)">Kepler wrote three laws. Newton wrote four. Einstein wrote two. Every one of them a single line of math that held across regime after regime, decade after decade. Diginetics does that, for your business, automatically.</p>
+<div class="compare-grid" style="margin-top:20px">
+<div class="compare-col them">
+<div class="compare-label">Today's AI</div>
+<p style="color:var(--light)">You ask a question.</p>
+<p style="color:var(--light)">It writes a confident-sounding answer.</p>
+<p style="color:var(--light)">You have no idea if it is true.</p>
+<p style="color:var(--light)">It never follows up. It never improves.</p>
+<p style="font-size:.88em;color:var(--dim);margin-top:12px;font-style:italic">A stranger giving directions. Sure-sounding. Guessing.</p>
+</div>
+<div class="compare-col us">
+<div class="compare-label">Diginetics (DDX + Prometheus)</div>
+<p style="color:var(--light)">It discovers the mathematical equations governing your domain.</p>
+<p style="color:var(--light)">It proves every equation on data it has never seen.</p>
+<p style="color:var(--light)">It hands you the equation so you can verify it yourself.</p>
+<p style="color:var(--light)">Then it keeps going. Every day. Getting smarter.</p>
+<p style="font-size:.88em;color:var(--accent);margin-top:12px;font-style:italic">A team of scientists that lives in your office and never stops.</p>
+</div>
+</div>
+</div>
+<div class="sn">03 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 4. THE LAWS WE HAVE ALREADY DISCOVERED -->
+<div class="slide" id="s4">
+<div class="content">
+<h3>Tangible Proof</h3>
+<h2>The laws we have <span class="g">already discovered.</span></h2>
+<p style="margin-bottom:18px">Every equation below was discovered by DDX, validated out of sample, and survived rigorous null testing. None of them was hand-crafted. None was trained for.</p>
+
+<div class="law cre">
+<div class="law-name">CRE. Housing supply is mortgage rate. 99.90% out of sample.</div>
+<div class="law-eq">Months Supply = 1.78 + 30-year mortgage rate</div>
+<p class="law-sub">One line of math. Validated across 21 rolling windows spanning COVID, the housing boom, the fastest rate-hiking cycle in 40 years, and the subsequent plateau. Four regime shifts. One law.</p>
+</div>
+
+<div class="law cre">
+<div class="law-name">CRE. Home price growth, amplified. 98.90% out of sample.</div>
+<div class="law-eq">Price YoY = CPI (3-mo) &times; (sale-to-list ratio, 7-mo)&sup2;</div>
+<p class="law-sub">A feedback loop: inflation sets the baseline, market competitiveness amplifies it quadratically. Generic ML models need millions of parameters to even approximate this. We return it as one equation.</p>
+</div>
+
+<div class="law cre">
+<div class="law-name">CRE. Structural credit spread. 99.86% out of sample.</div>
+<div class="law-eq">30-year mortgage rate = Fed funds rate + 2.62%</div>
+<p class="law-sub">Held through zero-rate policy, rapid tightening, and normalization. A constant of nature the market has been broadcasting for years. Nobody wrote it down until DDX did.</p>
+</div>
+
+<div class="law biology">
+<div class="law-name">Biology. Inflammatory cascade. Validated 10x to 20x above null.</div>
+<div class="law-eq">IL-2 &asymp; 25.9 &times; MIP-1&alpha;   (one link in a 4-stage chain with ~75x cumulative gain)</div>
+<p class="law-sub">Discovered in a Tier 1 university research collaboration (Center for Convergent Bioscience and Medicine). A coupled feedback chain standard biostatistics missed for decades. Publication in preparation.</p>
+</div>
+
+<p style="font-size:.9em;color:var(--dim);margin-top:10px">One engine produced all of these. No domain-specific retraining. No hand-crafted features. Point it at data, receive the laws.</p>
+</div>
+<div class="sn">04 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 5. REGIME SHIFTS + FEEDBACK LOOPS -->
+<div class="slide" id="s5">
+<div class="content">
+<h3>Why DDX Equations Survive Things That Break ML</h3>
+<h2>Laws hold across <span class="g">regime shifts.</span> Feedback loops are <span class="c">captured, not averaged away.</span></h2>
+
+<div class="card-grid" style="margin-top:20px">
+<div class="card" style="border-color:rgba(16,185,129,.3)">
+<h4 style="color:var(--accent)">Regime shifts we have already survived</h4>
+<div class="regime-row">
+<span class="regime-chip">COVID shock, <strong>2020</strong></span>
+<span class="regime-chip">Housing boom, <strong>2021 to 2022</strong></span>
+<span class="regime-chip">Fastest rate hikes in 40 years, <strong>2022 to 2023</strong></span>
+<span class="regime-chip">Plateau, <strong>2024 to 2026</strong></span>
+</div>
+<p style="margin-top:8px">Same equations. Same coefficients. Held through all four. Standard ML retrains after every shift. Correlations die. Laws do not.</p>
+</div>
+<div class="card" style="border-color:rgba(6,182,212,.3)">
+<h4 style="color:var(--accent2)">Feedback loops we track directly</h4>
+<p>&bull; <strong>Coupled amplification cascades.</strong> 4-stage inflammatory signaling chain with ~75x cumulative gain from TNF&alpha; to IL-2. Each stage an equation. The coupling itself a discovery.</p>
+<p>&bull; <strong>Quadratic market competitiveness.</strong> Sale-to-list ratio squared inside the home-price law. That squared term is a feedback loop, rediscovered from data.</p>
+<p>&bull; <strong>Inverse relationships.</strong> Luxury buyer pressure equals one over feeder-market wealth capacity. R squared 1.0. Structural.</p>
+<p>&bull; <strong>Residual hunting.</strong> When an equation fails, we analyze <em>what it cannot explain</em>. That residual is where the next law lives.</p>
+</div>
+</div>
+
+<p style="margin-top:16px;font-size:.95em;color:var(--light)"><strong>The engineering claim.</strong> Black-box models fail at regime shifts because they capture <em>patterns</em>. DDX captures <em>structure</em>. Structure is what survives when the world changes.</p>
+</div>
+<div class="sn">05 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 6. HOW IT WORKS -->
+<div class="slide" id="s6">
+<div class="content">
+<h3>The Architecture</h3>
+<h2>Two engines. One platform.</h2>
+<p style="margin-bottom:24px">DDX discovers. Prometheus delivers. Together they form a compounding intelligence system.</p>
+
+<div class="card-grid">
+<div class="card" style="border-color:rgba(16,185,129,.3)">
+<h4 style="color:var(--accent)">DDX. Discovery Engine (Project Elijah)</h4>
+<p>Autonomous equation discovery. Point it at any dataset. It returns the closed-form algebraic equations governing relationships between variables. Patent-pending discovery pipeline with rigorous multi-stage validation on unseen data. Self-improving autonomous loop that gets smarter every cycle.</p>
+</div>
+<div class="card" style="border-color:rgba(6,182,212,.3)">
+<h4 style="color:var(--accent2)">Prometheus. Execution Layer</h4>
+<p>Orchestrates discovery across domains. Identifies knowledge gaps and scouts new data sources automatically. Runs discovered equations in real time against incoming data. Cross-domain universal-law discovery feeds every DDX instance stronger equations continuously.</p>
+</div>
+</div>
+
+<div class="stat-row" style="margin-top:28px">
+<div class="stat"><div class="sv" style="color:var(--accent)">2,173+</div><div class="sl">Equations Discovered<br>and Validated</div></div>
+<div class="stat"><div class="sv" style="color:var(--accent2)">8</div><div class="sl">Industries Validated<br>Single Codebase</div></div>
+<div class="stat"><div class="sv" style="color:var(--accent)">94 to 99.7%</div><div class="sl">Backtest Accuracy<br>On Unseen Data</div></div>
+<div class="stat"><div class="sv" style="color:var(--accent2)">46</div><div class="sl">Self-Discovered<br>Meta-Laws</div></div>
+</div>
+</div>
+<div class="sn">06 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 7. SELF-IMPROVING -->
+<div class="slide" id="s7">
+<div class="content">
+<h3>The Moat</h3>
+<h2>The system that <span class="g">discovers its own laws.</span></h2>
+<p style="margin-bottom:24px">DDX does not just discover equations about your data. It discovers equations about <em>how it discovers equations</em>. This is the self-referential meta-optimizer (patent-pending).</p>
+
+<div class="card-grid-3">
+<div class="card">
+<h4 style="color:var(--accent)">Stage 1. Manual Discovery</h4>
+<p>Client points DDX at a question. It discovers equations, validates them, returns interpretable results. Immediate ROI.</p>
+</div>
+<div class="card">
+<h4 style="color:var(--accent2)">Stage 2. Autonomous Mode</h4>
+<p>DDX runs continuously. Discovers equations the client has not asked for. Identifies its own weaknesses. Targets gaps. Gets smarter every cycle.</p>
+</div>
+<div class="card">
+<h4 style="color:var(--purple)">Stage 3. Prometheus Cross-Domain</h4>
+<p>Universal laws discovered across all clients feed back into every DDX instance. Each deployment makes every other deployment stronger.</p>
+</div>
+</div>
+
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;margin-top:24px">
+<h4 style="color:var(--gold);margin-bottom:12px">The Meta-Optimizer (Patent-Pending)</h4>
+<p style="font-size:.92em">After each discovery cycle, DDX analyzes its own performance. What worked, what did not, where accuracy improved. It then applies its <em>own discovery engine to its own behavior</em>, finding the equations that govern how to get better results. It learns how it learns, then tunes itself for the next cycle. 46 self-discovered optimization laws and counting. No other system does this.</p>
+</div>
+</div>
+<div class="sn">07 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 8. PROOF -->
+<div class="slide" id="s8">
+<div class="content">
+<h3>Proof</h3>
+<h2>We did not just build it. <span class="g">We proved it.</span></h2>
+<p style="margin-bottom:8px">Tested across 8 industries on data the system never trained on. Every result is a first-pass, single-execution output. No iterative tuning.</p>
+
+<table>
+<tr><th>Domain</th><th>Equations</th><th>Backtest Accuracy</th><th>Status</th></tr>
+<tr><td><strong>Residential Real Estate</strong></td><td>132 of 132 validated</td><td style="color:var(--accent)">99.72%</td><td><span class="pill pill-green">DEPLOYED</span></td></tr>
+<tr><td><strong>Commercial Real Estate</strong></td><td>408 of 408 validated</td><td style="color:var(--accent)">94.37%</td><td><span class="pill pill-green">VALIDATED</span></td></tr>
+<tr><td><strong>Biomedical and CRO Research</strong></td><td>240 equations discovered</td><td style="color:var(--accent)">Up to 98.9% accuracy</td><td><span class="pill pill-blue">ACTIVE</span></td></tr>
+<tr><td><strong>Major League Baseball</strong></td><td>60-player out-of-sample</td><td style="color:var(--accent)">Competitive with 20-yr systems</td><td><span class="pill pill-green">VALIDATED</span></td></tr>
+<tr><td><strong>Oil and Gas</strong></td><td>52+ equations discovered</td><td style="color:var(--accent)">Industry benchmark</td><td><span class="pill pill-green">VALIDATED</span></td></tr>
+<tr><td><strong>Healthcare Readmissions</strong></td><td>Equations discovered</td><td style="color:var(--accent)">Validated</td><td><span class="pill pill-green">VALIDATED</span></td></tr>
+<tr><td><strong>Retail, Water, Transport</strong></td><td>Cross-domain validated</td><td style="color:var(--accent)">94%+</td><td><span class="pill pill-green">VALIDATED</span></td></tr>
+</table>
+
+<p style="font-size:.85em;margin-top:16px"><strong style="color:var(--text)">220,000+ observations processed.</strong> The system that produced these artifacts is the same system deployed to clients. This is the floor, not the ceiling.</p>
+</div>
+<div class="sn">08 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 9. CRO / BIOMEDICAL -->
+<div class="slide" id="s9">
+<div class="content">
+<h3>Application. CRO and Biomedical Research</h3>
+<h2>Accelerating the path from <span class="c">data to treatment.</span></h2>
+<p style="margin-bottom:20px">In an active Tier 1 university research engagement, DDX autonomously discovered 240 validated equations across 24 biomarkers in a preclinical study. The findings reshape how scientists approach drug targets.</p>
+
+<div class="card-grid">
+<div class="card">
+<h4 style="color:var(--accent)">What the Discoveries Reveal</h4>
+<p>&bull; <strong>Hidden inflammatory cascades.</strong> DDX uncovered the quantitative chain linking growth factors to inflammatory mediators, giving researchers a mathematical roadmap of how inflammation propagates, plus targeted intervention points.</p>
+<p style="margin-top:8px">&bull; <strong>Cross-pathway master regulators.</strong> By analyzing what the equations <em>could not</em> explain, DDX identified shared hidden signals across metabolic and inflammatory pathways, narrowing the search for universal treatment targets.</p>
+<p style="margin-top:8px">&bull; <strong>Stoichiometric coupling constants.</strong> Dimensionless ratio equations reveal the fundamental gain of biological feedback loops, giving scientists the functional form most likely to be conserved across species.</p>
+<p style="margin-top:8px">&bull; Statistically validated at <strong style="color:var(--accent)">3.6x to 20.7x above noise</strong> (p less than 0.001). Real biological discoveries, not artifacts.</p>
+</div>
+<div class="card">
+<h4 style="color:var(--accent2)">What This Means for Treatment</h4>
+<p>&bull; <strong>Faster drug target identification.</strong> Instead of years of hypothesis testing, DDX hands researchers quantified pathway maps in hours.</p>
+<p style="margin-top:8px">&bull; <strong>Precision intervention design.</strong> Scientists calculate exactly which pathway node to target and predict downstream effects mathematically.</p>
+<p style="margin-top:8px">&bull; <strong>Reduced preclinical failure.</strong> Equations validated on held-out data mean fewer dead-end hypotheses entering expensive trials.</p>
+<p style="margin-top:8px">&bull; <strong>Hypothesis generation at scale.</strong> Residual analysis reveals what current science is missing.</p>
+<p style="margin-top:12px"><strong style="color:var(--text)">$80B+ global CRO market</strong> spends billions on preclinical analytics. DDX compresses months of analysis into hours.</p>
+</div>
+</div>
+</div>
+<div class="sn">09 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 10. REAL ESTATE -->
+<div class="slide" id="s10">
+<div class="content">
+<h3>Application. Residential Real Estate</h3>
+<h2>Quantifying what <span class="g">actually drives</span> your market.</h2>
+<p style="margin-bottom:20px">First deployment with Harwood Real Estate. 128 autonomous discovery cycles. 82+ strong equations. Live dashboard running 24/7.</p>
+
+<div class="card-grid">
+<div class="card">
+<h4 style="color:var(--accent)">What DDX Discovered</h4>
+<p>&bull; <strong>Migration pull.</strong> The exact mathematical relationship between buyer profile fit and migration pressure across feeder markets <span class="pill pill-green" style="margin-left:4px">92% accuracy</span></p>
+<p style="margin-top:8px">&bull; <strong>Buyer pressure.</strong> How affordability gaps and migration dynamics combine to create segment-specific demand <span class="pill pill-green" style="margin-left:4px">95% accuracy</span></p>
+<p style="margin-top:8px">&bull; <strong>Mortgage impact.</strong> Quantified the exact dollar impact of rate changes on home values in specific ZIP codes.</p>
+<p style="margin-top:10px">A developer can now calculate exactly how much buyer pressure each feeder ZIP generates as income profiles shift.</p>
+</div>
+<div class="card">
+<h4 style="color:var(--accent2)">What the Client Gets</h4>
+<p>&bull; Dedicated DDX instance on AWS</p>
+<p>&bull; Live dashboard with AI chat assistant</p>
+<p>&bull; Equation library built from their market data</p>
+<p>&bull; Autonomous mode. Discovers while they sleep.</p>
+<p>&bull; Scenario modeling. "What if rates drop 1 percent?"</p>
+<p>&bull; 132 of 132 equations validated at 99.72% accuracy.</p>
+<p style="margin-top:10px;font-size:.85em;color:var(--dim)">Harwood deployment is live. Proving the model for regional expansion.</p>
+</div>
+</div>
+</div>
+<div class="sn">10 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 11. COMMERCIAL REAL ESTATE -->
+<div class="slide" id="s11">
+<div class="content">
+<h3>Application. Commercial Real Estate</h3>
+<h2>What actually moves <span class="c">sale prices.</span></h2>
+<p style="margin-bottom:20px">DDX analyzed 31 US metropolitan markets. 408 of 408 equations validated on held-out data. Florida metros included: Tampa, Miami, Orlando, Jacksonville.</p>
+
+<div style="background:var(--surface);border:1px solid rgba(16,185,129,.25);border-radius:10px;padding:16px 20px;margin:10px 0">
+<p style="font-size:.95em;color:var(--accent);margin:0"><strong>Key finding.</strong> Median sale price is governed by just three measurable variables (top-tier home values, cap rate trends, rental yields) with 94% accuracy on unseen data.</p>
+</div>
+
+<div class="card-grid" style="margin-top:20px">
+<div class="card">
+<h4 style="color:var(--accent)">Institutional CRE Intelligence</h4>
+<p>&bull; Calculate exact dollar impact of cap rate shifts.</p>
+<p>&bull; Model interest-rate scenarios with mathematical precision.</p>
+<p>&bull; Consumer confidence decomposed. It is a <em>lagging indicator</em> of two measurable inputs, not an independent variable.</p>
+<p>&bull; Discovered equations governing healthcare facility CRE: occupancy drivers, patient volume relationships.</p>
+</div>
+<div class="card">
+<h4 style="color:var(--accent2)">Florida-Adjacent Relevance</h4>
+<p>DDX already has validated equations for Tampa, Miami, Orlando, and Jacksonville metros. Example Tampa finding:</p>
+<p>&bull; Low 12-month projected price growth (+4.81%, one of the lowest in the 31-metro set).</p>
+<p>&bull; High 65+ growth and rehab demand drives CRE healthcare-facility opportunity.</p>
+<p>&bull; Cap rate sensitivities quantified at the metro level.</p>
+<p style="margin-top:10px;font-size:.85em;color:var(--dim)">Florida institutional CRE funds and developers are a natural beachhead market.</p>
+</div>
+</div>
+</div>
+<div class="sn">11 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 12. MULTI-INDUSTRY -->
+<div class="slide" id="s12">
+<div class="content">
+<h3>Domain Agnostic</h3>
+<h2><span class="g">One engine.</span> Every industry.</h2>
+<p style="margin-bottom:20px">The same codebase. The same engine. Configure once for any domain. Validated across radically different industries.</p>
+
+<div class="uc-grid">
+<div class="uc-card">
+<div class="uc-icon">&#127973;</div>
+<h4>Healthcare and CRO</h4>
+<p>Biomarker pathway discovery. Drug target identification. Hospital readmission drivers. Clinical trial signal detection.</p>
+</div>
+<div class="uc-card">
+<div class="uc-icon">&#127968;</div>
+<h4>Residential Real Estate</h4>
+<p>Market driver equations. Migration patterns. Buyer pressure modeling. Feeder ZIP analytics.</p>
+</div>
+<div class="uc-card">
+<div class="uc-icon">&#127970;</div>
+<h4>Commercial Real Estate</h4>
+<p>Cap rate modeling. Rent roll optimization. Healthcare facility CRE. Institutional portfolio intelligence.</p>
+</div>
+<div class="uc-card">
+<div class="uc-icon">&#9918;</div>
+<h4>Sports Analytics</h4>
+<p>Player performance equations. Contract valuation. Out-of-sample projection. Competitive with 20-year projection systems.</p>
+</div>
+<div class="uc-card">
+<div class="uc-icon">&#128167;</div>
+<h4>Energy and Resources</h4>
+<p>Production optimization. Validated on industry benchmarks. Process efficiency equations. Feedback loop detection.</p>
+</div>
+<div class="uc-card">
+<div class="uc-icon">&#128202;</div>
+<h4>Financial Services</h4>
+<p>Risk factor discovery. Market microstructure equations. Interpretable, auditable outputs. Regulatory-compliant transparency.</p>
+</div>
+</div>
+</div>
+<div class="sn">12 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 13. PATENT / IP -->
+<div class="slide" id="s13">
+<div class="content">
+<h3>Intellectual Property</h3>
+<h2>13 patent-pending inventions. <span class="go">Deep moat.</span></h2>
+<p style="margin-bottom:20px">Provisional patent filed covering the full system architecture. 13 distinct inventions across three patent families.</p>
+
+<div class="card-grid-3">
+<div class="card" style="border-color:rgba(16,185,129,.3)">
+<h4 style="color:var(--accent)">Family A. Discovery</h4>
+<p>&bull; Proprietary sensitivity-guided search</p>
+<p>&bull; Multi-dimensional relationship analysis</p>
+<p>&bull; Forward-looking accuracy evaluation</p>
+<p>&bull; Dual-criterion quality selection</p>
+</div>
+<div class="card" style="border-color:rgba(6,182,212,.3)">
+<h4 style="color:var(--accent2)">Family B. Validation and Projection</h4>
+<p>&bull; Structural change detection</p>
+<p>&bull; History-grounded scenario generation</p>
+<p>&bull; Equation-coupled simulation</p>
+<p>&bull; Regime-aware adaptation</p>
+</div>
+<div class="card" style="border-color:rgba(139,92,246,.3)">
+<h4 style="color:var(--purple)">Family C. Platform</h4>
+<p>&bull; Universal domain configuration</p>
+<p>&bull; Autonomous pattern detection</p>
+<p>&bull; Multi-stage backtest validation</p>
+<p>&bull; Leakage-safe data processing</p>
+<p>&bull; Scalable parallel computation</p>
+</div>
+</div>
+
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin-top:20px">
+<p style="font-size:.92em"><strong style="color:var(--gold)">Self-Improving Discovery Loop.</strong> The core differentiator. DDX discovers the equations governing its own performance, then uses those equations to get better at discovery. A compounding advantage no competitor can replicate without infringing on our IP.</p>
+</div>
+</div>
+<div class="sn">13 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 14. MARKET -->
+<div class="slide" id="s14">
+<div class="content">
+<h3>Market Opportunity</h3>
+<h2>Start local. Prove it. <span class="g">Scale.</span></h2>
+
+<div class="stat-row">
+<div class="stat" style="border-color:var(--accent)"><div class="sv" style="color:var(--accent)">$1.8M</div><div class="sl">Tuscaloosa alone</div></div>
+<div class="stat"><div class="sv" style="color:var(--accent2)">$21B</div><div class="sl">US RE tech market</div></div>
+<div class="stat"><div class="sv" style="color:var(--accent2)">$80B+</div><div class="sl">Global CRO market</div></div>
+<div class="stat"><div class="sv" style="color:var(--accent)">$46B</div><div class="sl">Decision intelligence<br>by 2030</div></div>
+</div>
+
+<div class="card-grid" style="margin-top:20px">
+<div class="card">
+<h4 style="color:var(--accent)">Phase 1. Beachheads</h4>
+<p><strong>Real Estate.</strong> Harwood proves it. Win Tuscaloosa firms. $1.8M local ARR.</p>
+<p style="margin-top:6px"><strong>CRO and Biomedical.</strong> Active university research engagement validates pharmaceutical discovery. First CRO pilot contract.</p>
+</div>
+<div class="card">
+<h4 style="color:var(--accent2)">Phase 2. Regional and Vertical Expansion</h4>
+<p><strong>RE.</strong> Florida metros (Tampa, Miami, Orlando, Jacksonville), Birmingham, Huntsville, Nashville, Atlanta.</p>
+<p style="margin-top:6px"><strong>CRO.</strong> Expand from research validation to contract discovery services for multiple CROs.</p>
+<p style="margin-top:6px"><strong>CRE.</strong> Institutional investors and healthcare facility portfolios.</p>
+</div>
+</div>
+</div>
+<div class="sn">14 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 15. COMPETITION -->
+<div class="slide" id="s15">
+<div class="content">
+<h3>Competition</h3>
+<h2>No one else does what we do.</h2>
+<table>
+<tr><th style="width:22%">Competitor</th><th style="width:35%">Their Problem</th><th style="width:43%">Diginetics</th></tr>
+<tr><td><strong>Zillow and Redfin</strong></td><td>Generic national averages, pattern matching</td><td style="color:var(--accent)">Discovers your market's actual governing equations</td></tr>
+<tr><td><strong>ChatGPT and Claude</strong></td><td>Probabilistic text generation, no verification</td><td style="color:var(--accent)">Proves answers with math. Tests on unseen data.</td></tr>
+<tr><td><strong>Equation Discovery Tools</strong></td><td>Single-pass. No autonomous loop. No self-improvement.</td><td style="color:var(--accent)">Patent-pending self-improving autonomous discovery</td></tr>
+<tr><td><strong>Traditional ML</strong></td><td>Black box. No equations. No interpretability.</td><td style="color:var(--accent)">Interpretable equations you can read and verify</td></tr>
+<tr><td><strong>CoStar and MLS</strong></td><td>Shows what happened. Backward-looking.</td><td style="color:var(--accent)">Explains why and projects what is next</td></tr>
+<tr><td><strong>Hiring Analysts</strong></td><td>$100K+ per year. One market. Months of work.</td><td style="color:var(--accent)">24/7. Every market. Fraction of the cost.</td></tr>
+</table>
+</div>
+<div class="sn">15 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 16. REVENUE + PROJECTIONS -->
+<div class="slide" id="s16">
+<div class="content">
+<h3>Business Model</h3>
+<h2>Enterprise deployments. <span class="g">Not SaaS.</span></h2>
+<table>
+<tr><th>Tier</th><th>Price</th><th>What They Get</th></tr>
+<tr><td><strong>Pilot</strong></td><td>$15K to $20K</td><td>60 to 90 day proof of value on their data</td></tr>
+<tr><td><strong>Annual</strong></td><td>$100K to $200K+</td><td>DDX running continuously. Autonomous plus on-demand.</td></tr>
+<tr><td><strong>Enterprise</strong></td><td>$500K+</td><td>Multi-office. Multi-market. Multi-industry.</td></tr>
+<tr><td><strong>CRO Discovery</strong></td><td>Per-study pricing</td><td>Equation discovery plus validation for clinical datasets</td></tr>
+</table>
+
+<div class="stat-row" style="margin-top:18px">
+<div class="stat"><div class="sv" style="color:var(--accent)">80 to 90%</div><div class="sl">Gross Margin</div></div>
+<div class="stat"><div class="sv" style="color:var(--accent)">High</div><div class="sl">Switching Cost.<br>Equations compound.</div></div>
+<div class="stat"><div class="sv" style="color:var(--accent2)">Network</div><div class="sl">Effect via Prometheus.<br>Every client makes every<br>other stronger.</div></div>
+</div>
+
+<table style="margin-top:18px">
+<tr><th></th><th>Year 1</th><th>Year 2</th><th>Year 3</th></tr>
+<tr><td><strong>Revenue</strong></td><td style="color:var(--accent)">$300K to $600K</td><td style="color:var(--accent)">$1.8M to $3M</td><td style="color:var(--accent)">$5M to $10M</td></tr>
+<tr><td><strong>Clients</strong></td><td>3 to 6</td><td>12 to 20</td><td>30 to 50</td></tr>
+<tr><td><strong>Verticals</strong></td><td>RE + CRO</td><td>+ CRE + Healthcare</td><td>+ Energy + Finance</td></tr>
+<tr><td><strong>Gross Margin</strong></td><td>80%</td><td>83%</td><td>85%</td></tr>
+</table>
+</div>
+<div class="sn">16 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 17. MILESTONES -->
+<div class="slide" id="s17">
+<div class="content">
+<h3>Milestones</h3>
+<h2>What is done. What is next.</h2>
+<div class="timeline">
+<div class="tl-item"><div class="tl-dot" style="background:var(--accent)"></div><div class="tl-text"><strong>Core engine built and validated across 8 industries.</strong> <span style="color:var(--accent);font-size:.8em">DONE</span></div></div>
+<div class="tl-item"><div class="tl-dot" style="background:var(--accent)"></div><div class="tl-text"><strong>Real estate proven. 132 of 132 equations at 99.7% accuracy.</strong> <span style="color:var(--accent);font-size:.8em">DONE</span></div></div>
+<div class="tl-item"><div class="tl-dot" style="background:var(--accent)"></div><div class="tl-text"><strong>CRE proven. 408 of 408 equations across 31 US metros (Tampa, Miami, Orlando, Jacksonville included).</strong> <span style="color:var(--accent);font-size:.8em">DONE</span></div></div>
+<div class="tl-item"><div class="tl-dot" style="background:var(--accent)"></div><div class="tl-text"><strong>CRO biomedical validation. 240 equations, permutation-tested, publication in preparation.</strong> <span style="color:var(--accent);font-size:.8em">DONE</span></div></div>
+<div class="tl-item"><div class="tl-dot" style="background:var(--accent)"></div><div class="tl-text"><strong>Patent specification completed. 13 inventions, 3 families.</strong> <span style="color:var(--accent);font-size:.8em">DONE</span></div></div>
+<div class="tl-item"><div class="tl-dot" style="background:var(--accent)"></div><div class="tl-text"><strong>DDX dashboard live with AI assistant plus autonomous mode.</strong> <span style="color:var(--accent);font-size:.8em">DONE</span></div></div>
+<div class="tl-item"><div class="tl-dot" style="background:var(--accent2)"></div><div class="tl-text"><strong>Harwood Real Estate deployment.</strong> <span style="color:var(--accent2);font-size:.8em">IN PROGRESS</span></div></div>
+<div class="tl-item"><div class="tl-dot" style="background:var(--accent2)"></div><div class="tl-text"><strong>University research engagement. Manuscript plus deeper analysis.</strong> <span style="color:var(--accent2);font-size:.8em">IN PROGRESS</span></div></div>
+<div class="tl-item"><div class="tl-dot" style="background:var(--accent2)"></div><div class="tl-text"><strong>Multiple investor discussions active.</strong> <span style="color:var(--accent2);font-size:.8em">IN TALKS</span></div></div>
+<div class="tl-item"><div class="tl-dot" style="background:var(--dim)"></div><div class="tl-text"><strong>Embarc Collective cohort + Florida Founders Startup Fund.</strong> <span style="color:var(--dim);font-size:.8em">APPLYING, APRIL 2026</span></div></div>
+<div class="tl-item"><div class="tl-dot" style="background:var(--dim)"></div><div class="tl-text"><strong>Florida metro RE pilot (Tampa, Miami, or Orlando institutional CRE fund).</strong> <span style="color:var(--dim);font-size:.8em">Q3 2026</span></div></div>
+<div class="tl-item"><div class="tl-dot" style="background:var(--dim)"></div><div class="tl-text"><strong>Regional expansion: Birmingham, Nashville, Atlanta.</strong> <span style="color:var(--dim);font-size:.8em">Q4 2026+</span></div></div>
+</div>
+</div>
+<div class="sn">17 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 18. TEAM -->
+<div class="slide" id="s18">
+<div class="content">
+<h3>Team</h3>
+<h2>Two founders. Built from scratch.</h2>
+<div class="founder-row">
+<div class="founder-card">
+<div class="founder-avatar" style="background:linear-gradient(135deg,#10b981,#06b6d4);color:#fff">ML</div>
+<h4>Michael Lazzarotti</h4>
+<div class="role">CEO and Co-Founder</div>
+<p>Built the entire DDX discovery engine and Prometheus orchestration layer from scratch. Validated across 8 industries. Manages active CRO research engagement and all technical architecture. Patent inventor.</p>
+</div>
+<div class="founder-card">
+<div class="founder-avatar" style="background:linear-gradient(135deg,#8b5cf6,#06b6d4);color:#fff">EO</div>
+<h4>Evan O'Connell</h4>
+<div class="role">CFO, COO and Co-Founder</div>
+<p>Strategy, financial modeling, go-to-market execution. Built the commercial framework. Manages investor relations, client pipeline, and market expansion strategy.</p>
+</div>
+</div>
+<p style="margin-top:16px;text-align:center;font-size:.95em">Michael builds the tech. Evan builds the business. DDX handles the domain expertise.</p>
+</div>
+<div class="sn">18 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 19. WHY EMBARC + FLORIDA FOUNDERS -->
+<div class="slide" id="s19">
+<div class="content">
+<h3>Why Embarc Collective and Florida Founders</h3>
+<h2>The right partners. <span class="fl">The right state.</span> The right moment.</h2>
+<p style="margin-bottom:18px">Diginetics is ready to scale commercially. Florida is the fastest-growing institutional CRE, healthcare, and population market in the country. Embarc Collective and Florida Founders are the two best platforms in the state for turning a validated deep-tech product into a revenue-generating company.</p>
+
+<div class="partner-grid">
+<div class="partner-card">
+<h4>Embarc Collective</h4>
+<div class="subtitle">Tampa Bay. Founder-First Startup Hub.</div>
+<p><strong>What we bring.</strong> A patent-pending deep-tech platform already validated in 8 industries, two live deployments, a Tier 1 university research collaboration, and a clear Florida beachhead (Tampa CRE findings already in hand).</p>
+<p><strong>What we need from Embarc.</strong> Operator coaching for the zero-to-ten customer transition, structured founder development, GTM sharpening, and direct access to the Tampa Bay CRE, healthcare, and institutional-investor network where our first Florida deals will close.</p>
+</div>
+<div class="partner-card">
+<h4>Florida Founders Startup Fund</h4>
+<div class="subtitle">Florida-focused seed capital.</div>
+<p><strong>Why we fit the thesis.</strong> Technical moat (13 patent-pending inventions), validated traction across radically different verticals, enterprise-scale revenue model (not consumer SaaS), and a product-market fit that aligns with Florida's largest industries: real estate, healthcare, and financial services.</p>
+<p><strong>What the capital accelerates.</strong> First Florida pilot (CRE fund or healthcare facility operator), sales hires, dedicated GPU compute, and utility-patent filings that lock in the moat.</p>
+</div>
+</div>
+
+<p style="margin-top:14px;font-size:.95em;color:var(--light)"><strong>The alignment.</strong> Embarc sharpens the company. Florida Founders funds the Florida beachhead. Our existing CRE equations, university biomedical validation, and Harwood live deployment make the path from pilot to revenue mechanical, not speculative.</p>
+</div>
+<div class="sn">19 / 20</div>
+<div class="logo">DIGINETICS</div>
+</div>
+
+<!-- 20. CLOSE / THE ASK -->
+<div class="slide" id="s20" style="text-align:center">
+<div class="content" style="max-width:700px;margin:0 auto">
+<h3>The Ask</h3>
+<h2>The technology works. The market is waiting.</h2>
+<p style="font-size:1.1em;color:var(--light);margin-bottom:24px">DDX is built. Harwood is deploying. Tier 1 university research is validating. The patent is drafted. Florida is next. This capital accelerates everything.</p>
+
+<div style="background:var(--surface);border:1px solid rgba(16,185,129,.3);border-radius:14px;padding:28px;margin-bottom:28px">
+<p style="font-size:.85em;color:var(--accent);letter-spacing:2px;font-weight:600;margin-bottom:8px">USE OF FUNDS</p>
+<div class="fund-bar">
+<div class="fund-seg" style="flex:35;background:#10b981">Sales and GTM</div>
+<div class="fund-seg" style="flex:25;background:#06b6d4">Compute and Infra</div>
+<div class="fund-seg" style="flex:20;background:#8b5cf6">IP and Legal</div>
+<div class="fund-seg" style="flex:10;background:#f59e0b">Engineering</div>
+<div class="fund-seg" style="flex:10;background:#71717a">Reserve</div>
+</div>
+<p style="font-size:.85em;color:var(--muted);margin-top:12px">Sales. Client acquisition across Florida RE, CRE, and CRO verticals. Compute. Dedicated GPU hardware (owned, not rented). IP. Provisional plus utility patent filings. Engineering. Scale team for multi-vertical deployment.</p>
+</div>
+
+<p style="font-size:1em;color:var(--dim);margin-bottom:8px">Every other AI asks you to trust it. We hand you the equation.</p>
+<h1 style="font-size:2.8em;line-height:1.2;margin-bottom:20px">We built the AI<br>that <span style="background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent">proves it first.</span></h1>
+
+<p style="color:var(--dim);font-size:.95em;margin-top:30px">Michael Lazzarotti &bull; Evan O'Connell</p>
+<p style="color:var(--dim);font-size:.85em">michael.lazzarotti@diginetics.co</p>
+<p style="color:var(--dim);font-size:.85em;margin-top:4px">Diginetics, Inc. Prepared for Embarc Collective and Florida Founders Startup Fund.</p>
+<p style="color:#27272a;font-size:.75em;margin-top:30px;letter-spacing:2px">CONFIDENTIAL. 2026.</p>
+</div>
+<div class="sn">20 / 20</div>
+</div>
+
+<!-- NAV DOTS -->
+<div class="nav" id="nav"></div>
+
+<script>
+const slides=document.querySelectorAll('.slide');
+const nav=document.getElementById('nav');
+slides.forEach((_,i)=>{
+  const d=document.createElement('div');
+  d.className='nav-dot';
+  d.addEventListener('click',()=>slides[i].scrollIntoView({behavior:'smooth'}));
+  nav.appendChild(d);
+});
+const dots=document.querySelectorAll('.nav-dot');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const idx=[...slides].indexOf(e.target);
+      dots.forEach((d,i)=>d.classList.toggle('active',i===idx));
+    }
+  });
+},{threshold:.5});
+slides.forEach(s=>obs.observe(s));
+
+document.addEventListener('keydown',e=>{
+  const active=[...slides].findIndex(s=>s.getBoundingClientRect().top>=-100&&s.getBoundingClientRect().top<window.innerHeight/2);
+  if(e.key==='ArrowDown'||e.key===' '||e.key==='PageDown'){
+    e.preventDefault();
+    const next=Math.min(active+1,slides.length-1);
+    slides[next].scrollIntoView({behavior:'smooth'});
+  }
+  if(e.key==='ArrowUp'||e.key==='PageUp'){
+    e.preventDefault();
+    const prev=Math.max(active-1,0);
+    slides[prev].scrollIntoView({behavior:'smooth'});
+  }
+});
+</script>
+</body>
+</html>
